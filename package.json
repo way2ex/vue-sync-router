@@ -1,0 +1,76 @@
+{
+    "name": "vue-sync-router",
+    "version": "0.0.1",
+    "description": "auto sync reactive data between router url & component",
+    "keywords": [
+        "vue",
+        "sync-router",
+        "router-sync"
+    ],
+    "license": "MIT",
+    "files": [
+        "dist",
+        "src"
+    ],
+    "bin": {},
+    "main": "./dist/vue-sync-router.es.js",
+    "module": "./dist/vue-sync-router.umd.js",
+    "exports": {
+        ".": {
+            "import": "./dist/vue-sync-router.es.js",
+            "require": "./dist/vue-sync-router.umd.js"
+        }
+    },
+    "scripts": {
+        "start": "tsc --watch",
+        "build": "vite build",
+        "lint": "eslint . --ext .ts",
+        "dev": "cd demo && yarn dev"
+    },
+    "homepage": "",
+    "bugs": "",
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "author": {
+        "name": "Justin Zhu",
+        "email": "vac872089248@gmail.com"
+    },
+    "dependencies": {
+        "@types/lodash-es": "^4.17.5",
+        "lodash-es": "^4.17.21",
+        "typescript": "^4.4.3",
+        "vue-demi": "latest"
+    },
+    "peerDependencies": {
+        "@vue/composition-api": "^1.0.0-rc.1",
+        "vue": "^2.0.0 || >=3.0.0",
+        "vue-router": "^4.x || ^3.x"
+    },
+    "peerDependenciesMeta": {
+        "@vue/composition-api": {
+            "optional": true
+        }
+    },
+    "devDependencies": {
+        "@types/lodash": "^4.14.172",
+        "@types/node": "^14.14.6",
+        "@typescript-eslint/eslint-plugin": "^4.6.1",
+        "@typescript-eslint/parser": "^4.6.1",
+        "eslint": "^7.13.0",
+        "eslint-config-standard": "^16.0.1",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-promise": "^4.2.1",
+        "vite": "^2.5.7",
+        "vue": "^3.0.0",
+        "vue-router": "^4.0.11"
+    },
+    "engines": {
+        "node": ">10.17.0"
+    },
+    "workspaces": [
+        "demo/"
+    ]
+}
