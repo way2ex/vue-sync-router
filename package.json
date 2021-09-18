@@ -27,11 +27,11 @@
         "lint": "eslint . --ext .ts",
         "dev": "cd demo && yarn dev"
     },
-    "homepage": "",
-    "bugs": "",
+    "homepage": "https://github.com/zhuqingguang/vue-sync-router/blob/main/README.md",
+    "bugs": "https://github.com/zhuqingguang/vue-sync-router/issues",
     "repository": {
         "type": "git",
-        "url": ""
+        "url": "https://github.com/zhuqingguang/vue-sync-router"
     },
     "author": {
         "name": "Justin Zhu",
