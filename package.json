@@ -25,7 +25,8 @@
         "start": "tsc --watch",
         "build": "vite build",
         "lint": "eslint . --ext .ts",
-        "dev": "cd demo && yarn dev"
+        "dev": "cd demo && yarn dev",
+        "publish-patch": "npm version path && git add . && git commit -m \"chore: update version\""
     },
     "homepage": "https://github.com/zhuqingguang/vue-sync-router/blob/main/README.md",
     "bugs": "https://github.com/zhuqingguang/vue-sync-router/issues",
