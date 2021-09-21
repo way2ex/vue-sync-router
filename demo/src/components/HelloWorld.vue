@@ -1,19 +1,36 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 import { useSyncRouter } from '../../../src/index'
 
+const router = useRouter();
 const props = defineProps<{ msg: string }>()
 
 const count = ref(0)
+const arr = ref([1,2,3])
 useSyncRouter({
-    count
+    count,
+    arr
 })
 
 console.log(props.msg)
+
+function changeArr() {
+    arr.value = [1,2,3,4,5]
+}
+function changeQuery() {
+    router.push({
+        query: {
+            arr: [1,2,3,4,5,6,7,10]
+        }
+    })
+}
 </script>
 
 <template>
-<h1>{{ msg }}</h1><p>Recommended IDE setup:<a href="https://code.visualstudio.com/" target="_blank">VSCode</a>+<a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a></p><p>See<code>README.md</code>for more information.</p><p><a href="https://vitejs.dev/guide/features.html" target="_blank">Vite Docs</a>|<a href="https://v3.vuejs.org/" target="_blank">Vue 3 Docs</a></p><button type="button" @click="count++">count is: {{ count }}</button><p>Edit<code>components/HelloWorld.vue</code>to test hot module replacement.</p>
+<h1>{{ arr.join() }}</h1>
+<button @click="changeArr">change arr</button>
+<button @click="changeQuery">push router query's arr</button>
 </template>
 
 <style scoped>
