@@ -1,6 +1,6 @@
 {
     "name": "vue-sync-router",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "auto sync reactive data between router url & component",
     "keywords": [
         "vue",
